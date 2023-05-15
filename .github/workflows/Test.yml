@@ -22,4 +22,4 @@ jobs:
           secret_key: ${{ secrets.SECRET_KEY }}
           bucket_name: acceptance-test
           key: 'demo/upload-to-qiniu-action-ci-test.txt'
-          localfile: './test-file.txt'
+          local_file: './test-file.txt'
