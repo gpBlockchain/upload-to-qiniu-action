@@ -25,8 +25,6 @@ This is a GitHub Action to upload a file to Qiniu.
     local_file: ${{ secrets.LOCALFILE }}
 ```
 
-Please replace `your-github-username` with your GitHub username.
-
 Remember to set `ACCESS_KEY`, `SECRET_KEY`, `BUCKET_NAME`, `KEY`, and `LOCAL_FILE` as secrets in your GitHub repository settings.
 
 ## How to set secrets
