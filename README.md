@@ -16,7 +16,7 @@ This is a GitHub Action to upload a file to Qiniu.
 
 ```yaml
 - name: Upload to Qiniu
-  uses: your-github-username/upload-to-qiniu-action@main
+  uses: gpBlockchain/upload-to-qiniu-action@main
   with:
     access_key: ${{ secrets.ACCESS_KEY }}
     secret_key: ${{ secrets.SECRET_KEY }}
