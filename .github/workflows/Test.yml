@@ -1,0 +1,25 @@
+name: Test
+
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create test file
+        run: echo "This is a test file" > test-file.txt
+
+      - name: Test Upload to Qiniu
+        uses: ./
+        with:
+          access_key: ${{ secrets.ACCESS_KEY }}
+          secret_key: ${{ secrets.SECRET_KEY }}
+          bucket_name: acceptance-test
+          key: 'demo/upload-to-qiniu-action-ci-test.txt'
+          localfile: './test-file.txt'
