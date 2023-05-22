@@ -27,5 +27,5 @@ runs:
 
     - name: Run script
       run: |
-        python upload_to_qiniu.py --access_key ${{ inputs.access_key }} --secret_key ${{ inputs.secret_key }} --bucket_name ${{ inputs.bucket_name }} --key ${{ inputs.key }} --local_file ${{ inputs.local_file }}
+        python ${{ github.action_path }}/upload_to_qiniu.py --access_key ${{ inputs.access_key }} --secret_key ${{ inputs.secret_key }} --bucket_name ${{ inputs.bucket_name }} --key ${{ inputs.key }} --local_file ${{ inputs.local_file }}
       shell: bash
